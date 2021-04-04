@@ -100,13 +100,13 @@ a {
 
 a:link, 
 a:visited { 
-color:#D0CCCC; 
-text-decoration:none; 
+	color:#D0CCCC; 
+	text-decoration:none; 
 } 
 a:hover, 
 a:active { 
-color:#fff; 
-text-decoration:none; 
+	color:#fff; 
+	text-decoration:none; 
 }
 
 video#bfq {
