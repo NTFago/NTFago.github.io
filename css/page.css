@@ -1,5 +1,13 @@
 * {margin-right: 5%; margin-left: 5%; margin-bottom: 5%; margin-bottom: 5%; padding:0pt; text-indent:0; background-color: #C4C2C3}
- .s1 { color: black; font-family: 'Zhi Mang Xing', cursive; font-style: normal; font-weight: normal; text-decoration: none; font-size: 24pt; text-align: center;}
+.s1 {
+	color: black;
+	font-family: '庞门正道标题体';
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	font-size: 24pt;
+	text-align: center;
+}
  .s2 { color: black; font-family:宋体; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
  .s3 { color: black; font-family:方正黑体_GBK; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; padding-bottom: 1em;padding-left: 0pt;text-indent: 0pt;text-align: left;}
 p { color: black; font-family:"等线 Light"; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11pt; margin:0pt; }
