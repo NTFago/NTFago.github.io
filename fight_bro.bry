@@ -1,6 +1,6 @@
 import random
 from browser import document
-from browser.html import P, B, INPUT, BUTTON, H4, A
+from browser.html import P, B, INPUT, BUTTON, H4, A, DIV
 from browser.widgets.dialog import InfoDialog
 from browser.timer import set_timeout
 
@@ -118,12 +118,14 @@ class Game:
 
 def upload_page(evt):
 	del document["game"]
-	document <= H4("游戏已开始，请输入本回合执行的指令：")
-	document <= P(f"当前状态(第{game.bout}回合)", id="state")
-	document <= P(f"电脑玩家：Hp = {computer.hp}    能量 = {computer.energy}", id="com")
-	document <= P(f"人类玩家：Hp = {player.hp}    能量 = {player.energy}", id="pl")
-	document <= INPUT(id="command")
-	document <= BUTTON("确定", id="submit")
+	game_info = DIV(id="game_info")
+	game_info <= H4("游戏已开始，请输入本回合执行的指令：")
+	game_info <= P(f"当前状态(第{game.bout}回合)", id="state")
+	game_info <= P(f"电脑玩家：Hp = {computer.hp}    能量 = {computer.energy}", id="com")
+	game_info <= P(f"人类玩家：Hp = {player.hp}    能量 = {player.energy}", id="pl")
+	game_info <= INPUT(id="command")
+	game_info <= BUTTON("确定", id="submit")
+	document <= game_info
 	document["submit"].bind("click", submit)
 
 def submit(evt):
@@ -142,6 +144,7 @@ def submit(evt):
 		document <= P("未知的错误，请联系管理员修复")
 
 	if result:
+		del document["game_info"]
 		document <= A("重新开始~", Class="anniu", href="index.html")
 	else:
 		document["state"].textContent = f"当前状态(第{game.bout}回合)"
