@@ -145,7 +145,7 @@ def submit(evt):
 
 	if result:
 		del document["game_info"]
-		document <= A("重新开始~", Class="anniu", href="index.html")
+		document <= A("重新开始~", Class="anniu", href="game.html")
 	else:
 		document["state"].textContent = f"当前状态(第{game.bout}回合)"
 		document["com"].textContent = f"电脑玩家：Hp = {computer.hp}    能量 = {computer.energy}"
