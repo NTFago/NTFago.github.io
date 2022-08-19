@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <title>无法描述</title>
+        <script src="js/brython.js"></script>
+	    <script src="js/brython_stdlib.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="author" content="萧垣">
+        <style type="text/css">
+            * {margin-left: 5%; margin-right: 5%;}
+			h1, h2, h3 {text-align: center; padding: 3px;}
+            table {
+                text-align: center;
+                margin: auto;
+				margin-bottom: 10px;
+            }
+            td {padding: 10px;}
+            th{padding: 10px;}
+			a {
+				display: block;
+				color: #14171B;
+				margin: 0 auto;
+    			line-height: 40px;
+    			text-align: center;
+				text-decoration: none;
+			}
+			a:link, a:visited { 
+				color:#14171B; 
+				text-decoration:none; 
+			} 
+			a:hover, a:active { 
+				color:#14171B; 
+				text-decoration:none; 
+			}
+			.anniu {
+  				color: #14171B;
+  				font-weight: auto;
+  				font-size: 20px;
+  				background-color: rgba(0, 0, 0, 0.12);
+  				padding: 9px 9px;
+  				border-radius: 10px;
+  				margin-top: 10px;
+				margin-left: 45%;
+				margin-right: 45%;
+			}
+			.anniu:hover {
+				color: #797979;
+				background-color: rgba(250, 248, 241, 0.12);
+				transition: all 350ms;
+			}
+            b {display: block; font-size: medium; padding-top: 2px;}
+        </style>
+    </head>
+    <body bgcolor="#EEEEF5" onload="brython()">
+        <h1>入站验证</h1>
+        <p>请输入你的姓名：</p>
+        <input id="check1">
+        <p>请输入验证码：</p>
+        <input id="check2">
+        <button id="submit">提交</button>
+        <script type="text/python" src="verification.bry"></script>
+        </script>
+	</body>
+
+</html>

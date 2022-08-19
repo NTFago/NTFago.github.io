@@ -1,0 +1,19 @@
+from browser import document,
+from browser.html import P, B, INPUT, BUTTON, H4, A, DIV
+
+check_table = {
+    "" : ""
+}
+# 前面名字，后面验证码
+
+def check(evt):
+    num = document["check1"].value
+    name = document["check2"].value
+    if num == check_table[name]:
+        print("验证通过")
+        document <= A("点击跳转", href="niyounagezige/ans.html")
+    else:
+        print("验证失败")
+        document <= P("验证失败")
+
+document["submit"].bind("click", check)
