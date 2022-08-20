@@ -28,8 +28,8 @@ def re_load():
     document <= menu
     ans = DIV(Class = "ans")
     for key, value in subject.items():
-        subject = DIV(Class=f"{value}")
-        subject <= H2(f"{key}")
+        major = DIV(Class=f"{value}")
+        major <= H2(f"{key}")
         ans <= subject
     document <= ans
 
