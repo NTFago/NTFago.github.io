@@ -2,7 +2,22 @@ from browser import document
 from browser.html import H1, DIV, BUTTON, A, P, H2
 
 check_table = {
-    "1" : "1"
+    "萧垣" : "SUS_Un",
+    "骄傲红玫瑰" : "SOS_Charlie",
+    "¹杯生椰拿铁" : "zuiai_拿铁",
+    "秋霂" : "爱死_六元",
+    "cyy" : "不要开学",
+    "程杨炫" :  "wc_xxs",
+    "." : "方治涵的爸爸",
+    "少爺の心、妳傷不起" : "哈哈",
+    "cxy59秒速杀昨日信息作业" : "cxy今日再创佳绩！",
+    "无水印" : "猪剩假c沃",
+    "3tu" : "乌屎硬c沃",
+    "1" : "萧逸命运中的女朋友",
+    "云胡不喜" : "出去玩出去玩",
+    "啊嚏~" : "不想开学不想开学",
+    "LeO_" : "读点书吧",
+    "玫瑰女人" : "我是天才少女",
 }
 # 前面名字，后面验证码
 subject = {"语文": "Cn", "数学": "Maths", "英语": "En", "物理": "Phy", "化学": "Chem", "信技": "It", "通技": "Gt"}
@@ -17,6 +32,7 @@ def check(evt):
         print("验证失败")
         document <= P("验证失败")
 
+
 def re_load():
     del document["title"], document["check"]
     menu = DIV(Class = "dropdown")
@@ -30,7 +46,7 @@ def re_load():
     for key, value in subject.items():
         major = DIV(Class=f"{value}")
         major <= H2(f"{key}")
-        ans <= subject
+        ans <= major
     document <= ans
 
 document["submit"].bind("click", check)
