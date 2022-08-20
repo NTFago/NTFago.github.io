@@ -1,19 +1,33 @@
 from browser import document
-from browser.html import P, B, INPUT, BUTTON, H4, A, DIV
+from browser.html import H1, DIV, BUTTON, A
 
 check_table = {
-    "" : ""
+    "1" : "1"
 }
 # 前面名字，后面验证码
+subject = {"语文": "Cn", "数学": "Maths", "英语": "En", "物理": "Phy", "化学": "Chem", "信技": "It", "通技": "Gt"}
 
 def check(evt):
     num = document["check1"].value
     name = document["check2"].value
     if num == check_table[name]:
         print("验证通过")
-        document <= A("点击跳转", href="niyounagezige/ans.html")
+        re_load()
     else:
         print("验证失败")
         document <= P("验证失败")
+
+def re_load():
+    del document["title"], document["check"]
+    menu = DIV(Class = "dropdown")
+    menu <= BUTTON("目录", Class = "dropbtn")
+    sub = DIV(Class = "dropdown-content")
+    for key, value in subject.items():
+        sub <= A(f"{key}", href=f"#{value}")
+    menu <= sub
+    document <= menu
+    ans = DIV(Class = "ans")
+    for key, value in subject.items():
+        ans <= P(f"{key}", Class=f"{}")
 
 document["submit"].bind("click", check)

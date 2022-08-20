@@ -4,60 +4,67 @@
         <meta charset="utf-8">
         <title>无法描述</title>
         <script src="js/brython.js"></script>
+		<script src="js/brython_stdlib.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="author" content="萧垣">
         <style type="text/css">
-            * {margin-left: 5%; margin-right: 5%;}
 			h1, h2, h3 {text-align: center; padding: 3px;}
-            table {
-                text-align: center;
-                margin: auto;
-				margin-bottom: 10px;
-            }
-            td {padding: 10px;}
-            th{padding: 10px;}
-			a {
-				display: block;
-				color: #14171B;
-				margin: 0 auto;
-    			line-height: 40px;
-    			text-align: center;
+            .dropbtn {
+				background-color: #4CAF50;
+				color: white;
+				padding: 16px;
+				font-size: 16px;
+				border: none;
+				cursor: pointer;
+			}
+
+			/* 容器 <div> - 需要放置下拉内容 */
+			.dropdown {
+				position: relative;
+				display: inline-block;
+			}
+
+			/* 下拉内容（默认隐藏） */
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+			}
+
+			/* 下拉链接 */
+			.dropdown-content a {
+				color: black;
+				padding: 12px 16px;
 				text-decoration: none;
+				display: block;
 			}
-			a:link, a:visited { 
-				color:#14171B; 
-				text-decoration:none; 
-			} 
-			a:hover, a:active { 
-				color:#14171B; 
-				text-decoration:none; 
+
+			/* 悬停时更改下拉链接的颜色 */
+			.dropdown-content a:hover {background-color: #f1f1f1}
+
+			/* 悬停时显示下拉菜单 */
+			.dropdown:hover .dropdown-content {
+				display: block;
 			}
-			.anniu {
-  				color: #14171B;
-  				font-weight: auto;
-  				font-size: 20px;
-  				background-color: rgba(0, 0, 0, 0.12);
-  				padding: 9px 9px;
-  				border-radius: 10px;
-  				margin-top: 10px;
-				margin-left: 45%;
-				margin-right: 45%;
+
+			/* 显示下拉内容时，更改下拉按钮的背景颜色 */
+			.dropdown:hover .dropbtn {
+				background-color: #3e8e41;
 			}
-			.anniu:hover {
-				color: #797979;
-				background-color: rgba(250, 248, 241, 0.12);
-				transition: all 350ms;
-			}
-            b {display: block; font-size: medium; padding-top: 2px;}
         </style>
     </head>
     <body bgcolor="#EEEEF5" onload="brython()">
-        <h1>入站验证</h1>
-        <p>请输入你的姓名：</p>
-        <input id="check1">
-        <p>请输入验证码：</p>
-        <input id="check2">
-        <button id="submit">提交</button>
+        <h1 id="title">入站验证</h1>
+		<div id="check">
+			<p>请输入你的姓名：</p>
+			<input id="check1">
+			<p>请输入验证码：</p>
+			<input id="check2">
+			<button id="submit">提交</button>
+		</div>
         <script type="text/python" src="verification.bry"></script>
         </script>
 	</body>
