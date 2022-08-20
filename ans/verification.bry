@@ -1,5 +1,5 @@
 from browser import document
-from browser.html import H1, DIV, BUTTON, A
+from browser.html import H1, DIV, BUTTON, A, P, H2
 
 check_table = {
     "1" : "1"
@@ -28,7 +28,9 @@ def re_load():
     document <= menu
     ans = DIV(Class = "ans")
     for key, value in subject.items():
-        ans <= P(f"{key}", Class=f"{value}")
+        subject = DIV(Class=f"{value}")
+        subject <= H2(f"{key}")
+        ans <= subject
     document <= ans
 
 document["submit"].bind("click", check)
