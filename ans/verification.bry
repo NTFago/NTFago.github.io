@@ -57,7 +57,8 @@ def add_ans():
     print(all_contents.split("\n"), type(all_contents))
     splited = all_contents.split("\n")
     for i in range(len(splited)):
-        document[ids[i]] <= H3(splited[i])
+		for j in splited[i].split(";"):
+			document[ids[i]] <= P(j)
 
 
         
