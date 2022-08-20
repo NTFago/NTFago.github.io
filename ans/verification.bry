@@ -28,6 +28,7 @@ def re_load():
     document <= menu
     ans = DIV(Class = "ans")
     for key, value in subject.items():
-        ans <= P(f"{key}", Class=f"{}")
+        ans <= P(f"{key}", Class=f"{value}")
+    document <= ans
 
 document["submit"].bind("click", check)
