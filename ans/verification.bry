@@ -48,8 +48,9 @@ def re_load():
         major = DIV(Class=f"{value}")
         major <= H2(f"{key}")
         ans <= major
-        div[value] = major
+        divs[value] = major
     document <= ans
+    add_ans()
 
 def add_ans():
     from urllib.request import urlopen
