@@ -21,6 +21,7 @@ check_table = {
 }
 # 前面名字，后面验证码
 subject = {"语文": "Cn", "数学": "Maths", "英语": "En", "物理": "Phy", "化学": "Chem", "信技": "It", "通技": "Gt"}
+divs = {}
 
 def check(evt):
     num = document["check1"].value
@@ -47,6 +48,14 @@ def re_load():
         major = DIV(Class=f"{value}")
         major <= H2(f"{key}")
         ans <= major
+        div[value] = major
     document <= ans
+
+def add_ans():
+    from urllib.request import urlopen
+    all_contents = urlopen("https://ntfago.github.io/ans/ans.txt").read()
+    document <= P(str(all_contents))
+
+
 
 document["submit"].bind("click", check)
