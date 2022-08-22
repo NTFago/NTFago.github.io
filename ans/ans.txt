@@ -1,7 +1,7 @@
 1.D 2.B 3.A 4.B 5.D 6.A 7.C 8.B 9.C;10.①陶渊明“登东皋以舒啸,临清流而赋诗”(或:李太白“天生我材必有用,千金散尽还复来”；苏东坡“大江东去,浪淘尽,千古风流人物”)	②带着鲜明的时代印记 显露了非凡的个性
 7~9班：0
 1.gesture;2.educators;3.employed;4.witnessed;5.distracts;6.barrier;8.reveal;9.slightly;10.embarrassed;11.adjust;12.distinguish;13.tendency;14.comparison;15.reliable;16.when;17.By记得大写;18.to;19.with;20.being.polluted;21.Knowing;22.waiting;23inferences;24.looking|challenged;25.varying;26.differences;27.merely;28.assessment;29.making;30.reading;31.having;32.building;33.following;34.from;35.down;36.eating;37.to.occupy;38.to.think;39.bowing;40.touched   阅读：CABB
-10班：;CABBCCDB AC CD ACD BCD;7~9班：;AADBCADAD;10.【答案】沿adcb方向，见解析;【详解】金属线框从右侧某一静止位置开始释放，运动至最低点的过程中，磁场从金属线框的左侧面穿过，磁通量在减小，则根据楞次定律可知，此过程中线框的感应电流方向为沿adcb方向。金属线框从最低点运动至左侧最高点的过程中，磁场从金属线框的右侧面穿过，磁通量在增加，则根据楞次定律可知，此过程中线框的感应电流方向为沿adcb方向。所以金属线框从右侧某一静止位置开始释放，在摆动到左侧最高点的过程中，线框中的感应电流方向始终为沿adcb方向。;11.【答案】逆时针方向（俯视)，逆时针方向（俯视);【详解】根据条形磁铁周围的磁场分布规律可知，从4位置到B位置，穿过导电线圈的磁通量向上且减小，根据楞次定律可知感应电流方向为逆时针方向(俯视)；从B位置到c位置，穿过导电线圈的磁通量向下且增大，根据楞次定律可知感应电流方向为逆时针方向（俯视）。
+10班：;DBBDA DCD AD BD AB
 0
 1.C    2.B    3.D    4.D    5.A    6.A    7.B;8.A    9.C    10.B    11.A;12.(1).1    (2).输入锅底当前温度值X; 13.4
 0
