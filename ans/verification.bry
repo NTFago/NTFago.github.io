@@ -1,5 +1,5 @@
 from browser import document
-from browser.html import H1, DIV, BUTTON, A, P, H2, H3
+from browser.html import H1, DIV, BUTTON, A, P, H2, IMG
 
 check_table = {
     "萧垣" : "SUS_Un",
@@ -62,8 +62,17 @@ def add_ans():
     for i in range(len(splited)):
 		for j in splited[i].split(";"):
 			document[ids[i]] <= P(j)
+    math_img_list = [
+        "https://solar.fbcontent.cn/apolo-image/iphone/179f0f739ad87d8.png",
+        "https://solar.fbcontent.cn/api/apolo-images/17637f800c3040c.jpg",
+        "https://solar.fbcontent.cn/apolo-image/iphone/179f0f8f76ee7c6.png",
+        "https://solar.fbcontent.cn/api/apolo-images/179ef34fdfc9d48.png",
+        "https://solar.fbcontent.cn/apolo-image/iphone/17b2091623ee115.png"
+        ]
+    document["Maths"] <= P("10班：")
+    math_imgs = DIV(Class="math_img")
+    for i in math_img_list:
+        document["Maths"] <= IMG(src=f"{i}")
 
-
-        
 
 document["submit"].bind("click", check)
