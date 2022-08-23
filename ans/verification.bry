@@ -62,17 +62,22 @@ def add_ans():
     for i in range(len(splited)):
 		for j in splited[i].split(";"):
 			document[ids[i]] <= P(j)
-    math_img_list = [
-        "https://solar.fbcontent.cn/apolo-image/iphone/179f0f739ad87d8.png",
-        "https://solar.fbcontent.cn/api/apolo-images/17637f800c3040c.jpg",
-        "https://solar.fbcontent.cn/apolo-image/iphone/179f0f8f76ee7c6.png",
-        "https://solar.fbcontent.cn/api/apolo-images/179ef34fdfc9d48.png",
-        "https://solar.fbcontent.cn/apolo-image/iphone/17b2091623ee115.png"
-        ]
+    math_img_dict = {
+        "53" : ["https://solar.fbcontent.cn/api/apolo-images/17a83efc062386d.jpg"],
+        "54" : ["./img/54题.png"],
+        "55" : ["https://solar.fbcontent.cn/api/apolo-images/1678382fcb3d194.jpg",
+                "https://solar.fbcontent.cn/api/apolo-images/1678382fcc8767b.jpg",
+                "https://solar.fbcontent.cn/api/apolo-images/1678382fcbb1279.jpg"],
+        "56" : ["https://solar.fbcontent.cn/api/apolo-images/163f310ce197422.jpg"],
+        "57" : ["https://solar.fbcontent.cn/api/apolo-images/17db75ccc4be89b.jpg"]
+        }
     document["Maths"] <= P("10班：")
-    math_imgs = DIV(Class="math_img")
-    for i in math_img_list:
-        document["Maths"] <= IMG(src=f"{i}")
+    for key, value in math_img_dict.items():
+        math_imgs = DIV(Class=f"math_img_{key}")
+        document["Maths"] <= P(f"{key}")
+        for img_path in value:
+            math_imgs <= IMG(src=f"{img_path}", Class="math")
+        document["Maths"] <= math_imgs
 
 
 document["submit"].bind("click", check)
