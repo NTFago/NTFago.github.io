@@ -63,13 +63,10 @@ def add_ans():
 		for j in splited[i].split(";"):
 			document[ids[i]] <= P(j)
     math_img_dict = {
-        "53" : ["https://solar.fbcontent.cn/api/apolo-images/17a83efc062386d.jpg"],
-        "54" : ["./img/54题.png"],
-        "55" : ["https://solar.fbcontent.cn/api/apolo-images/1678382fcb3d194.jpg",
-                "https://solar.fbcontent.cn/api/apolo-images/1678382fcc8767b.jpg",
-                "https://solar.fbcontent.cn/api/apolo-images/1678382fcbb1279.jpg"],
-        "56" : ["https://solar.fbcontent.cn/api/apolo-images/163f310ce197422.jpg"],
-        "57" : ["https://solar.fbcontent.cn/api/apolo-images/17db75ccc4be89b.jpg"]
+        "例1" : ["https://solar.fbcontent.cn/api/apolo-images/180cc20b68fe1de.jpg"],
+        "例4" : ["https://solar.fbcontent.cn/api/apolo-images/17a4115f20a498d.jpg"],
+        "4" : ["https://solar.fbcontent.cn/api/apolo-images/17a41187750be25.jpg"],
+        "手写" : ["https://solar.fbcontent.cn/api/apolo-images/17a3e1564c8de05.jpg"]
         }
     document["Maths"] <= P("10班：")
     for key, value in math_img_dict.items():
